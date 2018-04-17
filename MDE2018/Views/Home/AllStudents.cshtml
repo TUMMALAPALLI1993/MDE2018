@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "AllStudents";
+}
+
+
+
+<h1>List of students in our group....</h1>
+
+<ol>
+        @foreach (string name in Model)
+        {
+            <li> @name</li>
+        }
+
+    </ol>
+
+
+
