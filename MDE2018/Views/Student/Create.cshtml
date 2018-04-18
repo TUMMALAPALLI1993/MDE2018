@@ -1,0 +1,34 @@
+﻿@model Student
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<form asp-action="Create">
+
+    FirstName:
+
+    <input type="text" asp-for="Firstname" />
+
+    <br />
+    
+    LastName:
+
+    <input type="text" asp-for="Lastname" />
+
+    <br />
+
+    DOB:
+
+    <input type="text" asp-for="DOB" />
+
+    <br />
+
+    <input type="submit" value="save" />
+
+
+
+</form>
+

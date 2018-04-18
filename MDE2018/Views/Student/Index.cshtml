@@ -1,7 +1,17 @@
-﻿
+﻿@model List<Student>
+
 @{
     ViewData["Title"] = "Index";
 }
 
 <h2>Index</h2>
 
+<ul>
+
+    @foreach (Student s in Model)
+    {
+        <li> @s.Firstname @s.Lastname and DOB is @s.DOB </li>
+
+    }
+
+</ul>

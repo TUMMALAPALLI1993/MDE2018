@@ -11,11 +11,16 @@ namespace MDE2018.Models
     public class Student
     {
         public int StudentID { get; set; }
+
+        [Required(ErrorMessage ="This is must")]
         [StringLength(25)] //uses dataAnnotations
         public string Firstname { get; set; }
+
+        [Required]
         [StringLength(30)]
         public string Lastname { get; set; }
-        public DateTime DOB { get; set; }
+        public DateTime? DOB { get; set; }
+        [RegularExpression("http://.*")]
         public string PictureURL { get; set; }
 
     }

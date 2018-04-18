@@ -17,4 +17,11 @@
     <None Include="wwwroot\images\Kiran%281%29.jpg" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\StudentsController\Controllers\" />
+    <Folder Include="Areas\StudentsController\Data\" />
+    <Folder Include="Areas\StudentsController\Models\" />
+    <Folder Include="Areas\StudentsController\Views\" />
+  </ItemGroup>
+
 </Project>

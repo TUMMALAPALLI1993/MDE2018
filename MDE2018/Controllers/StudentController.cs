@@ -24,6 +24,10 @@ namespace MDE2018.Controllers
         public IActionResult Index()
         {
 
+            //Student stu = new Student();
+
+            //stu.Firstname = "kiran";
+
             ctx.Database.EnsureCreated();
 
             var query = from s in ctx.students select s;
@@ -31,6 +35,32 @@ namespace MDE2018.Controllers
             List<Student> result = query.ToList();
 
             return View(result);
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Student newStudent)
+        {
+            if (ModelState.IsValid)
+            {
+                ctx.students.Add(newStudent);
+                ctx.SaveChanges();
+
+                return RedirectToAction("Index");
+
+            }
+
+            else
+            {
+                return View();
+
+            }
+
+            
         }
     }
 }
