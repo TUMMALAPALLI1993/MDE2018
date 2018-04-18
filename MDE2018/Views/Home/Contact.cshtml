@@ -16,16 +16,25 @@
         <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
     </address>*@
 
-FirstName: @Model.Firstname
+<b>FirstName: </b>@Model.Firstname
 
 <br />
 
-LastName: @Model.Lastname
+<b>LastName: </b>@Model.Lastname
 
 <br />
 
-Date Of Birth: @Model.DOB.ToString("dd-MM-yyyy")
+<b>Date Of Birth: </b>@Model.DOB.ToString("dd-MM-yyyy")
 
 <br />
 
-<img src= @Model.PictureURL  height="150" width="100"/>
+<img src=@Model.PictureURL height="150" width="100" />
+
+<br />
+<br />
+
+<form>
+    <input type="button" value="Click here for full image"
+           
+    onclick="window.location.href='@Model.PictureURL'" />
+</form>

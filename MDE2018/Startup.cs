@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
+using Microsoft.EntityFrameworkCore;
+
 namespace MDE2018
 {
     public class Startup
@@ -21,6 +23,12 @@ namespace MDE2018
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //Add Microsoft entity framework core library
+
+            services.AddDbContext<Models.MyDbContext>(option =>
+            option.UseSqlServer(Configuration.GetConnectionString("StudentsDatabase")));
+
+
             services.AddMvc();
         }
 
